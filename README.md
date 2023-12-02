@@ -1,52 +1,43 @@
 
 # Admin
 
-The Question Paper Generator is a full-stack application designed to dynamically create question papers based on various criteria such as total marks and distribution of difficulty levels. The project is structured with a backend built on Node.js and Express, while the frontend is developed using React.
-## Key Features:
+This project focuses on building an Admin User Interface that allows administrators to view and manage user data provided via an API. The goal is to create a functional UI to display user information, implement search and filter functionalities, enable editing and deletion of rows, and incorporate pagination.
+## Key Features
 
-1.  **Dynamic Question Generation:**  Generates question papers based on specified total marks and difficulty distribution.
-   
-2.  **Backend with Express:**  Utilizes Node.js and Express for handling routes, data logic, and generation of question papers.
-    
-3.  **Frontend with React:**  Provides a user-friendly interface for configuring parameters and displaying the generated question paper.
-    
-4.  **Modularized Codebase:**  Organized structure with separate directories for backend and frontend components for enhanced maintainability.
-    
+- **Table Structure:** `Table.js` organizes the user data presentation, while `TableRow.js` handles individual user data rows, enabling editing, selection, and display of user information.
+
+- **User Interaction:** `SearchBar.js` allows users to filter data based on different properties. `Pagination.js` manages pagination controls for navigating through user data. `DeleteButton.js` enables deletion of selected rows.
+
+- **App Management:** `App.js` manages app state, conditional rendering of components based on search, deletion, and pagination. It coordinates communication between different components based on user actions.
+
+- **API Interaction:** Fetches user data via a GET request from an API and adjusts pagination based on the number of returned records.
+
+- **User Interaction Features:** Search and filter data, in-place editing and deletion of rows, selection of multiple rows with highlighting, paginated navigation controls, and a shortcut for selecting/deselecting all displayed rows.
+
+- **Responsiveness:** UI components are designed to be responsive, adjusting to different screen sizes.
 
 
-## Technology Stack
 
-Question_paper_generator is built using the following technologies:
+## Technologies Used
 
--   **Frontend**: React.js
--   **Backend**: Node.js with Express.js
+- React
+- JavaScript
+- HTML
+- CSS
 
-## Project Structure
- **Backend Structure:**
--   **backend/ Directory:** Contains the server-side code.
--   **data/ Directory:** Holds data files or data access logic.
--   **routes/ Directory:** Contains Express routes for handling questions.
--   **controllers/ Directory:** Includes logic for generating the question paper.
--   **index.js File:** Entry point for the Express application.
 
- **Frontend Structure:**
--   **frontend/ Directory:** Houses the client-side code..
--   **src/ Directory:** Holds the React application source code.
--   **components/ Directory:** Contains various React components
--   **App.js File:** Main React app component.
--   **index.js File:** Entry point for the React app.
 ## Installation
 
-To install and run Question_paper_generator locally, follow these steps:
+To install and run Admin locally, follow these steps:
 
 1.  Clone the repository:
     ```sh    
-    git clone https://github.com/yash7488/Question_paper_generator.git
+    git clone https://github.com/yash7488/Admin.git
     ```
     
 2.  Navigate to the cloned repository:
      
-    `cd Question_paper_generator` 
+    `cd Admin` 
     
 3.  Install the dependencies for the frontend:
     
@@ -55,30 +46,32 @@ To install and run Question_paper_generator locally, follow these steps:
     npm install
     ``` 
     
-4.  Install the dependencies for the backend:
-        
-    ```sh    
-    cd ../backend
-    npm install
-    ```
+
     
 
 
-## Running Question_paper_generator
+## Running Admin
 
-After completing the configuration steps, you can now run Question_paper_generator locally.
+After completing the configuration steps, you can now run Admin locally.
 
-1.  Start the backend server:
+
+1. Start the frontend development server:
 	```sh
-	cd backend 
-	node index.js
-	```
-2. Start the frontend development server:
-	```sh
-	cd ../frontend 
+	cd frontend 
 	npm start
 	```
-3. Access Question_paper_generator in your browser at `http://localhost:3000`.
+3. Access Admin in your browser at `http://localhost:3000`.
 
+## Deployment
+
+The application is deployed using [Netlify](https://www.netlify.com/) and accessible at [Live Link](https://radiant-zuccutto-450828.netlify.app).
+
+To deploy the application on Netlify:
+1. Push your code to a repository on GitHub.
+2. Log in to Netlify and connect it to your GitHub repository.
+3. Configure build settings, such as specifying the build command and output directory.
+4. Deploy your site.
+
+Once deployed, the application will be live at the provided Netlify URL.
 
 
